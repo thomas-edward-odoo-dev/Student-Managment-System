@@ -1,0 +1,263 @@
+<odoo>
+
+     <template id="assets_backend" name="account assets" inherit_id="web.assets_backend">
+      <xpath expr="." position="inside">
+        <script type="text/javascript" src="/student_test/static/src/js/block.js"/>
+      </xpath>
+    </template>
+    <!-- Data records go here -->
+<!--   action of menu   -->
+    <record id='student_student_male_action' model='ir.actions.act_window'>
+        <field name="name">Student Male</field>
+        <field name="res_model">student.student</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,kanban,calendar,graph</field>
+        <field name="domain">[('gender','=','male')]</field>
+        <field name="context">{'search_default_by_gender_male':1, 'default_name': 'Mohammed'}</field>
+    </record>
+
+        <record id='student_student_female_action' model='ir.actions.act_window'>
+        <field name="name">Student Female</field>
+        <field name="res_model">student.student</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form,kanban,calendar</field>
+        <field name="domain">[('gender','=','female')]</field>
+        <field name="context">{'search_default_by_gender_female':1, 'default_name': 'Mona','default_gender': 'female'}</field>
+    </record>
+
+    <menuitem name="Student Management" id="student_base_menu" />
+    <menuitem name="Student Management" id="main_student_menu" parent="student_base_menu"/>
+    <menuitem name="Student Male" id="student_male_menu" action="student_student_male_action" parent="main_student_menu"/>
+    <menuitem name="Student Female" id="student_female_menu" action="student_student_female_action" parent="main_student_menu"/>
+<!--    custom form view -->
+    <record id="student_male_view_form" model="ir.ui.view">
+        <field name="name">Student Male</field>
+        <field name="model">student.student</field>
+        <field name="arch" type="xml">
+           					<form string="Student Information">
+						<sheet>
+                            <header>
+                            	<button name="draft_med" states='draft' type="object" string="Medical Interview" class="oe_highlight"/>
+								<button name="med_acad" states='med_interview' type="object"  string="Academic Interview" class="oe_highlight"/>
+								<button name="acad_first" states='acad_interview' type="object"  string="First Year Register" class="oe_highlight"/>
+                            	<button name="first_second" states='first_register' type="object"  string="Second Year Register" class="oe_highlight"/>
+                            	<button name="first_first" states='first_register' type="object"  string="First Year Register" class="oe_highlight"/>
+                            	<button name="second_third" states='second_register' type="object"  string="Third Year Register" class="oe_highlight"/>
+                            	<button name="second_second" states='second_register'  type="object" string="Second Year Register" class="oe_highlight"/>
+                            	<button name="third_fourth" states='third_register'  type="object" string="Fourth Year Register" class="oe_highlight"/>
+                            	<button name="third_third" states='third_register'  type="object" string="Third Year Register" class="oe_highlight"/>
+                           		<button name="fourth_fourth" states='fourth_register' type="object"  string="Fourth Year Register" class="oe_highlight"/>
+                            	<button name="fourth_alumni" states='fourth_register' type="object"  string="Alumni" class="oe_highlight"/>
+
+                                	<button name="back" states='med_interview,acad_interview,first_register,second_register,third_register,fourth_register,alumni,dismiss' string="Back Request" type="object" class="oe_highlight"
+                                    groups="student_test.manager_access_group" />
+								<button name="dismiss" states='draft,med_interview,acad_interview,first_register,second_register,third_register,fourth_register' type="object"  string="Dismiss" class="oe_highlight"
+                                groups="student_test.manager_access_group" />
+                            	<button name="set_student_sequence" type="object" string="Generate Seat No." class="oe_highlight oe_inline"/>
+      							<button name="test_x2Many" type="object" string="Test x2Many" class="oe_highlight oe_inline"/>
+
+
+         						<field name="state" widget="statusbar" />
+							</header>
+							<group colspan="4" col="2">
+								<div>
+									<field name="image" widget="image"/>
+								</div>
+								<br/>
+									<h1>
+										<for string="Name"/>
+										<field name="name" placeholder="Enter Name"/>
+									</h1>
+									<h2>
+										<for string="Ministry University No."/>
+                                		<field name="uni_no" placeholder="Enter Ministry University No."/>
+                                        <for string="Seat No." groups="student_test.manager_access_group"/>
+                                		<field name="seat_no" groups="student_test.manager_access_group"/>
+                                	</h2>
+							</group>
+                            <group colspan="4" col="4">
+                                <field name="dob"/>
+                                <field name="age"/>
+                                <field name="gender" widget="radio"/>
+                                <field name="responsible_id"/>
+                                <field name="email" widget="email"/>
+                                <field name="phone"/>
+                                <field name="fdate"/>
+                                <field name="ldate"/>
+                                <field name="degree_id" widget="selection"/>
+<!--                                 <field name="degree_id" domain="[('name', 'ilike', 'Eng')]"/> -->
+                                <field name="regfees"/>
+                                <field name="tutfees"/>
+                                <field name="totfees"/>
+                                <field name="ref"/>
+                                <field name="ref_link" widget="url"/>
+                                <field name="num_re" attrs="{'invisible':[('state','!=','first_register'),
+                                                                          ('state','!=','second_register'),
+                                                                          ('state','!=','third_register'),
+                                                                          ('state','!=','fourth_register')]}"/>
+                                <field name="counter" />
+                            </group>
+                            <notebook>
+                            	<page string="School Result Details">
+                            		<field name="result_ids">
+                            			<tree editable="top">
+                            				<field name="subject_id"/>
+                                            <field name="result" avg="Average"/>
+                                        </tree>
+                                        <form>
+                                         	<group>
+                                         		<field name="subject_id"/>
+                                         		<field name="result"/>
+                                             </group>
+                                        </form>
+                                    </field>
+                                </page>
+                                <page string="Other Information">
+                                	<separator string="Hobbies Detail" colspan="4"/>
+                                    <field name="hobbies_ids" nolabel="1" widget="many2many_tags"/>
+                                </page>
+                            </notebook>
+                            <separator string="Health Issues and Notes" colspan="4"/>
+                            <field name="health_issues"/>
+                            <field name="health_notes" nolabel="1" attrs="{'invisible':[('health_issues','=','no')]}"/>
+                            <separator string="Template" colspan="4"/>
+                            <field name="template" nolabel="1"/>
+                    </sheet>
+
+					</form>
+
+        </field>
+    </record>
+<!--    custom tree (list) -->
+    <record id="student_male_view_tree" model="ir.ui.view">
+    <field name="name">Student Male</field>
+    <field name="model">student.student</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                                <field name="dob"/>
+                                <field name="age"/>
+                                <field name="gender" widget="radio"/>
+                                <field name="fdate"/>
+                                <field name="ldate"/>
+                                <field name="regfees"/>
+            </tree>
+        </field>
+    </record>
+    	<!-- Calendar View of Student -->
+			<record id="view_student_calendar" model="ir.ui.view" >
+				<field name="name">view.student.calendar</field>
+				<field name="model">student.student</field>
+                        <field name="domain">[('gender','=','female')]</field>
+				<field name="arch" type="xml">
+					<calendar string="Student" date_start="dob" date_stop="ldate" color="name" date_delay="regfees">
+						<field name="name"/>
+					</calendar>
+				</field>
+			</record>
+
+    <!-- Graph View of Student -->
+			<record id="view_student_graph" model="ir.ui.view">
+				<field name="name">view.student.graph</field>
+				<field name="model">student.student</field>
+				<field name="arch" type="xml">
+					<graph string="Student" type="pie">
+						<field name="name" type="row"/>
+						<field name="degree_id" type="column"/>
+						<field name="totfees" type="measure"/>
+					</graph>
+				</field>
+			</record>
+
+
+
+    	<!-- Kanban View of Student -->
+			<record id="student_kanban_view" model="ir.ui.view">
+            	<field name="name">view.student.kanban</field>
+            	<field name="model">student.student</field>
+            	<field name="arch" type="xml">
+            		<kanban default_group_by='gender'>
+                    	<!-- write fields here to be used in kanban box-->
+						<field name='uni_no'/>
+						<field name='name'/>
+						<field name='age'/>
+						<field name='email'/>
+						<field name='phone'/>
+						<field name='totfees'/>
+                    	<templates>
+                            <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click oe_kanban_card oe_employee_vignette " >
+                                <a type="open">
+
+                                    <div class="o_kanban_image">
+                                    <field name="image" nolabel="1" widget="image" class="oe_right oe_avatar"/>
+<!--                                    <img alt="Avatar" t-att-src="kanban_image('student.student', 'image')"/>-->
+                                    </div>
+
+                                </a>
+
+                                <div class="oe_kanban_details">
+                                    	<div>
+                                    		<b>
+                                    			<div><field name="uni_no"/></div>
+                                    			<div><field name='seat_no'/></div>
+                                    			<div><field name='name'/></div>
+                                    		</b>
+                                    			<div><field name='age'/></div>
+                                    	</div>
+                                    	<br/>
+                                    	<div>
+											<b><div><field name='degree_id'/></div></b>
+											<div><field name='email'/></div>
+											<div><field name='phone'/></div>
+											<b><div><field name='totfees'/></div></b>
+										</div>
+                            </div>
+                            </div>
+                        </t>
+
+
+                        </templates>
+                    </kanban>
+                </field>
+            </record>
+
+<!--    custom Search -->
+    <record id="student_male_view_search" model="ir.ui.view">
+    <field name="name">student Male</field>
+    <field name="model">student.student</field>
+        <field name="arch" type="xml">
+            <search string="Student">
+                        <field name="name"/>
+                        <field name="degree_id"/>
+                        <group string="Filter By">
+                            <filter name="by_gender_male" string="Male" domain="[('gender','=','male')]"/>
+                            <filter name="by_gender_female" string="Female" domain="[('gender','=','female')]"/>
+                        </group>
+                        <group string="Group By">
+                            <filter name="by_gender_m_f" string="Gender" domain="[]" context="{'group_by':'gender'}"/>
+                            <filter name="by_degree_id" string="Degree Registered For" context="{'group_by':'degree_id'}"/>
+                            <filter name="by_state_id" string="state" context="{'group_by':'state'}"/>
+                        </group>
+					</search>
+        </field>
+    </record>
+
+    <!-- View inheritance for Partner Model-->
+
+			<record id="view_partner_form_inherited_national_id" model="ir.ui.view">
+				<field name="name">Inherited Form View for National ID field</field>
+				<field name="model">res.partner</field>
+				<field name="inherit_id" ref="base.view_partner_form"/>
+				<field name="arch" type="xml">
+					<xpath expr="//field[@name='vat']" position="attributes">
+						<attribute name="invisible">1</attribute>
+					</xpath>
+					<xpath expr="//field[@name='vat']" position="after">
+						<field name='national_id'/>
+					</xpath>
+				</field>
+			</record>
+
+
+</odoo>

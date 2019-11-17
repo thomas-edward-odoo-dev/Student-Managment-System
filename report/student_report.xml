@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+       
+		<!-- Report Definition, registration -->
+		<report
+			id="student_report"
+            string="Student Profile"
+            model="student.student"
+            report_type="qweb-pdf"
+            name="student_test.student_profile_template"
+		/>
+
+    </data>
+</odoo>

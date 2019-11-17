@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+    	<!-- Audit log form view -->
+        <record id="student_audit_form_view" model="ir.ui.view">
+            <field name="name">student.audit.log.form</field>
+            <field name="model">student.audit.log</field>
+            <field name="arch" type="xml">
+                <form string="Student Audit Log" create="false" edit="false" delete="false">
+                    <group>
+                        <field name="student_info"/>
+                        <field name="date"/>
+                        <field name="status"/>
+                        <field name="user_id" string="By"/>
+                    </group>
+                </form>
+            </field>
+         </record>
+         
+         <!-- Audit log tree view -->
+         <record id="student_audit_tree_view" model="ir.ui.view">
+            <field name="name">student.audit.log.tree</field>
+            <field name="model">student.audit.log</field>
+            <field name="arch" type="xml">
+                <tree string="Student Audit Log" create="false" edit="false" delete="false">
+                        <field name="student_info"/>
+                        <field name="date"/>
+                        <field name="status"/>
+                        <field name="user_id" string="By"/>
+                </tree>
+            </field>
+         </record>
+         
+         <!-- Action and Menu -->
+         <record id="action_student_audit_log" model="ir.actions.act_window">
+            <field name="name">Student Audit Log</field>
+            <field name="res_model">student.audit.log</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem id="menu_log" parent="menu_configuration" action="action_student_audit_log" groups="student_test.manager_access_group"/>
+    </data>
+</odoo>

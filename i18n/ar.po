@@ -1,0 +1,781 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* student_test
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-12 16:41+0000\n"
+"PO-Revision-Date: 2019-09-12 19:20+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 2.2.3\n"
+"Last-Translator: \n"
+"Language: ar\n"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "<b>Age:</b>"
+msgstr "السن : "
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "<b>Date of Birth:</b>"
+msgstr "تاريخ الميلاد :"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "<b>Degree Registered For:</b>"
+msgstr "الدرجة المسجلة : "
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "<b>Email:</b>"
+msgstr "الايميل : "
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "<b>Ministry University No.:</b>"
+msgstr "رقم السر الخاص بالجامعة : "
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "<b>Name:</b>"
+msgstr "الاسم :"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "<b>Phone:</b>"
+msgstr "رقم الهاتف : "
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "<b>Status:</b>"
+msgstr "المرحلة : "
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "<b>University Seat No.:</b>"
+msgstr "سيريل الجامعة : "
+
+#. module: student_test
+#: model:ir.model,name:student_test.model_dorf_information
+msgid "A registry of all departments or faculties"
+msgstr "سجل لجميع الإدارات أو الكليات"
+
+#. module: student_test
+#: model:ir.model,name:student_test.model_dord_information
+msgid "A registry of all divisions or departments"
+msgstr "سجل لجميع الأقسام أو الأقسام"
+
+#. module: student_test
+#: model:ir.model,name:student_test.model_degree_detail
+msgid "A registry of all possible degrees offered by university / college"
+msgstr "سجل لجميع الدرجات الممكنة التي تقدمها الجامعة / الكلية"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+#: selection:student.student,state:0
+msgid "Academic Interview"
+msgstr "مقابلة أكاديمية"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__age
+msgid "Age"
+msgstr "سن"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+#: selection:student.student,state:0
+msgid "Alumni"
+msgstr "خريج"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Average"
+msgstr "متوسط"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Back Request"
+msgstr "ارجاع المرحلة"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_audit_form_view
+#: model_terms:ir.ui.view,arch_db:student_test.student_audit_tree_view
+msgid "By"
+msgstr "عن طريق"
+
+#. module: student_test
+#: model:ir.actions.act_window,name:student_test.wiz_calc_age_action
+msgid "Calc Age"
+msgstr "حساب العمر"
+
+#. module: student_test
+#: model:ir.actions.act_window,name:student_test.action_wiz_calc_age
+#: model:ir.ui.menu,name:student_test.menu_wiz_calc_age
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+#: model_terms:ir.ui.view,arch_db:student_test.wizard_calc_age_form
+msgid "Calculate Age"
+msgstr "حساب العمر"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.wizard_calc_age_form
+msgid "Calculate Student Age"
+msgstr "حساب عمر الطالب"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.wizard_calc_age_form
+#, fuzzy
+msgid "Calculate Student Age for All DOB Between Dates"
+msgstr "حساب عمر الطالب لجميع DOB بين التواريخ"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.wizard_calc_age_form
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_dord_information__code
+#: model:ir.model.fields,field_description:student_test.field_dorf_information__code
+msgid "Code"
+msgstr "كود"
+
+#. module: student_test
+#: model:ir.ui.menu,name:student_test.menu_configuration
+msgid "Configuration and Log"
+msgstr "التكوين وسجل"
+
+#. module: student_test
+#: model:ir.model,name:student_test.model_res_partner
+msgid "Contact"
+msgstr "اتصل"
+
+#. module: student_test
+#: selection:student.audit.log,status:0
+msgid "Copied"
+msgstr "طباعة"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__counter
+msgid "Counter"
+msgstr "عداد"
+
+#. module: student_test
+#: selection:student.audit.log,status:0
+msgid "Created"
+msgstr "انشاء"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_degree_detail__create_uid
+#: model:ir.model.fields,field_description:student_test.field_dord_information__create_uid
+#: model:ir.model.fields,field_description:student_test.field_dorf_information__create_uid
+#: model:ir.model.fields,field_description:student_test.field_hobbies_detail__create_uid
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_detail__create_uid
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_subject__create_uid
+#: model:ir.model.fields,field_description:student_test.field_student_audit_log__create_uid
+#: model:ir.model.fields,field_description:student_test.field_student_student__create_uid
+#: model:ir.model.fields,field_description:student_test.field_wiz_calc_age__create_uid
+msgid "Created by"
+msgstr "انشاء بواسطة"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_degree_detail__create_date
+#: model:ir.model.fields,field_description:student_test.field_dord_information__create_date
+#: model:ir.model.fields,field_description:student_test.field_dorf_information__create_date
+#: model:ir.model.fields,field_description:student_test.field_hobbies_detail__create_date
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_detail__create_date
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_subject__create_date
+#: model:ir.model.fields,field_description:student_test.field_student_audit_log__create_date
+#: model:ir.model.fields,field_description:student_test.field_student_student__create_date
+#: model:ir.model.fields,field_description:student_test.field_wiz_calc_age__create_date
+msgid "Created on"
+msgstr "انساء فى "
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_audit_log__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__dob
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد "
+
+#. module: student_test
+#: model:ir.actions.act_window,name:student_test.action_degree_detail
+#: model:ir.ui.menu,name:student_test.menu_degree_detail
+msgid "Degree Details"
+msgstr "تفاصيل الدرجات "
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_search
+msgid "Degree Registered For"
+msgstr "درجة مسجلة ل"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__degree_id
+msgid "Degree to Register For"
+msgstr "درجة للتسجيل ل"
+
+#. module: student_test
+#: code:addons/student_test/models/student.py:66
+#, python-format
+msgid "Degree to register for not selected!"
+msgstr "درجة للتسجيل لعدم تحديد!"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.view_degree_form
+#: model_terms:ir.ui.view,arch_db:student_test.view_degree_search
+#: model_terms:ir.ui.view,arch_db:student_test.view_degree_tree
+msgid "Degrees"
+msgstr "درجات "
+
+#. module: student_test
+#: selection:student.audit.log,status:0
+msgid "Deleted"
+msgstr "مسح"
+
+#. module: student_test
+#: model:ir.actions.act_window,name:student_test.action_department_information
+#: model:ir.ui.menu,name:student_test.menu_department_information
+#: model_terms:ir.ui.view,arch_db:student_test.view_department_form
+#: model_terms:ir.ui.view,arch_db:student_test.view_faculty_tree
+msgid "Department Information"
+msgstr "تفاصيل القسم"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_degree_detail__dorf_id
+#: model:ir.model.fields,field_description:student_test.field_dord_information__dorf_id
+msgid "Department or Faculty"
+msgstr "القسم او الجامعة"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.view_degree_search
+msgid "Department/Divison"
+msgstr "قسم / دوري الدرجة"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Dismiss"
+msgstr "فصل"
+
+#. module: student_test
+#: selection:student.student,state:0
+msgid "Dismissed"
+msgstr "فصل"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_degree_detail__display_name
+#: model:ir.model.fields,field_description:student_test.field_dord_information__display_name
+#: model:ir.model.fields,field_description:student_test.field_dorf_information__display_name
+#: model:ir.model.fields,field_description:student_test.field_hobbies_detail__display_name
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_detail__display_name
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_subject__display_name
+#: model:ir.model.fields,field_description:student_test.field_student_audit_log__display_name
+#: model:ir.model.fields,field_description:student_test.field_student_student__display_name
+#: model:ir.model.fields,field_description:student_test.field_wiz_calc_age__display_name
+msgid "Display Name"
+msgstr "الاسم الظاهر"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_degree_detail__dord_id
+msgid "Division or Department"
+msgstr "قسم او قسم "
+
+#. module: student_test
+#: selection:student.student,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Enter Ministry University No."
+msgstr "ادحال الرقم الجامعى "
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Enter Name"
+msgstr "ادحل الاسم"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__ref_link
+msgid "External Link"
+msgstr "اللينك"
+
+#. module: student_test
+#: model:ir.actions.act_window,name:student_test.action_faculty_information
+#: model:ir.ui.menu,name:student_test.menu_faculty_information
+#: model_terms:ir.ui.view,arch_db:student_test.view_faculty_form
+msgid "Faculty Information"
+msgstr "تفاصيل الكلية"
+
+#. module: student_test
+#: sql_constraint:dorf.information:0
+msgid "Faculty name must be unique!"
+msgstr "اسم الكلية اجبارى "
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.view_degree_search
+msgid "Faculty/Department"
+msgstr "الكلية \\ القسم "
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_degree_detail__degfees
+msgid "Fees per Year ($)"
+msgstr "الرسوم في السنة (جنية)"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_search
+#: selection:student.student,gender:0
+msgid "Female"
+msgstr "انثى"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_search
+msgid "Filter By"
+msgstr "التصنيف ب "
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__fdate
+msgid "First Registration Date"
+msgstr "تاريخ التسجيل الأول"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "First Year Register"
+msgstr "تسجيل السنة الاولى "
+
+#. module: student_test
+#: selection:student.student,state:0
+msgid "First Year Registered"
+msgstr "اعادة تسجيل السنة الاولى "
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Fourth Year Register"
+msgstr " تسجيل السنة الرابعة "
+
+#. module: student_test
+#: selection:student.student,state:0
+msgid "Fourth Year Registered"
+msgstr "اعادة تسجيل السنة الرابعة"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_wiz_calc_age__from_date
+msgid "From Date"
+msgstr "التاريخ من "
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__gender
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_search
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "General Information"
+msgstr "معلومات عامة"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "General Student Information"
+msgstr "معلومات الطلاب العامة"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Generate Seat No."
+msgstr "الرقم العام"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_search
+#: model_terms:ir.ui.view,arch_db:student_test.view_degree_search
+msgid "Group By"
+msgstr "مجموعة من"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__health_notes
+msgid "Health Issue(s) Details"
+msgstr "تفاصيل القضايا الصحية"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__health_issues
+msgid "Health Issues"
+msgstr " القضايا الصحية"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Health Issues and Notes"
+msgstr " القضايا الصحية و الملاحظات "
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Hobbies Detail"
+msgstr "تفاصيل الهوايات"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__hobbies_ids
+msgid "Hobbies Information"
+msgstr "معلومات الهوابات "
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_degree_detail__id
+#: model:ir.model.fields,field_description:student_test.field_dord_information__id
+#: model:ir.model.fields,field_description:student_test.field_dorf_information__id
+#: model:ir.model.fields,field_description:student_test.field_hobbies_detail__id
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_detail__id
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_subject__id
+#: model:ir.model.fields,field_description:student_test.field_student_audit_log__id
+#: model:ir.model.fields,field_description:student_test.field_student_student__id
+#: model:ir.model.fields,field_description:student_test.field_wiz_calc_age__id
+msgid "ID"
+msgstr "م"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__image
+msgid "Image"
+msgstr "الصورة "
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_degree_detail____last_update
+#: model:ir.model.fields,field_description:student_test.field_dord_information____last_update
+#: model:ir.model.fields,field_description:student_test.field_dorf_information____last_update
+#: model:ir.model.fields,field_description:student_test.field_hobbies_detail____last_update
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_detail____last_update
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_subject____last_update
+#: model:ir.model.fields,field_description:student_test.field_student_audit_log____last_update
+#: model:ir.model.fields,field_description:student_test.field_student_student____last_update
+#: model:ir.model.fields,field_description:student_test.field_wiz_calc_age____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__ldate
+msgid "Last Registration Date"
+msgstr "تاريخ التسجيل الأخير"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_degree_detail__write_uid
+#: model:ir.model.fields,field_description:student_test.field_dord_information__write_uid
+#: model:ir.model.fields,field_description:student_test.field_dorf_information__write_uid
+#: model:ir.model.fields,field_description:student_test.field_hobbies_detail__write_uid
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_detail__write_uid
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_subject__write_uid
+#: model:ir.model.fields,field_description:student_test.field_student_audit_log__write_uid
+#: model:ir.model.fields,field_description:student_test.field_student_student__write_uid
+#: model:ir.model.fields,field_description:student_test.field_wiz_calc_age__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_degree_detail__write_date
+#: model:ir.model.fields,field_description:student_test.field_dord_information__write_date
+#: model:ir.model.fields,field_description:student_test.field_dorf_information__write_date
+#: model:ir.model.fields,field_description:student_test.field_hobbies_detail__write_date
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_detail__write_date
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_subject__write_date
+#: model:ir.model.fields,field_description:student_test.field_student_audit_log__write_date
+#: model:ir.model.fields,field_description:student_test.field_student_student__write_date
+#: model:ir.model.fields,field_description:student_test.field_wiz_calc_age__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_search
+#: selection:student.student,gender:0
+msgid "Male"
+msgstr "ذكر"
+
+#. module: student_test
+#: model:res.groups,name:student_test.manager_access_group
+msgid "Manager"
+msgstr "المدير"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+#: selection:student.student,state:0
+msgid "Medical Interview"
+msgstr "المقابلة طبية"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__uni_no
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Ministry University No."
+msgstr "رقم جامعة الوزارة"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__phone
+msgid "NOK Contact"
+msgstr " الاتصال"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__email
+msgid "NOK Email"
+msgstr "الايميل"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_degree_detail__name
+#: model:ir.model.fields,field_description:student_test.field_dord_information__name
+#: model:ir.model.fields,field_description:student_test.field_dorf_information__name
+#: model:ir.model.fields,field_description:student_test.field_hobbies_detail__name
+#: model:ir.model.fields,field_description:student_test.field_student_student__name
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Name"
+msgstr "الاسم"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_res_partner__national_id
+#: model:ir.model.fields,field_description:student_test.field_res_users__national_id
+msgid "National ID"
+msgstr "الجنسية"
+
+#. module: student_test
+#: selection:student.student,health_issues:0
+msgid "No"
+msgstr "لا"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__num_re
+msgid "Number of back "
+msgstr "عدد اعادة السنة"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Other Information"
+msgstr "معلومات اخرى"
+
+#. module: student_test
+#: selection:student.student,ref:0
+msgid "Partner"
+msgstr "شريك"
+
+#. module: student_test
+#: code:addons/student_test/models/student.py:170
+#, python-format
+msgid "Please enter a detailed description!"
+msgstr "الرجاء إدخال وصف مفصل!"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__ref
+msgid "Reference"
+msgstr "المراجع"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__regfees
+msgid "Registration Fees"
+msgstr "رسوم التسجيل"
+
+#. module: student_test
+#: model:res.groups,name:student_test.staff_access_group
+msgid "Registration Staff"
+msgstr "مواظفين التسجيل"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__responsible_id
+msgid "Responsible Person / Next of Kin"
+msgstr "الشخص المسؤول / قريب من كين"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_detail__result
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "Result"
+msgstr "النتيجة"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "School Result Details"
+msgstr "تفاصيل نتيجة المدرسة"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__result_ids
+msgid "School Results"
+msgstr "دؤجات المدرسة"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "School Results Information"
+msgstr "معلوامات دراجات المدرسة"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__seat_no
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Seat No."
+msgstr "الرقم السيريل"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Second Year Register"
+msgstr "تسجيل السنة الثانية "
+
+#. module: student_test
+#: selection:student.student,state:0
+msgid "Second Year Registered"
+msgstr "اعادة تسجيل السنة الثانية "
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_audit_log__status
+#: model:ir.model.fields,field_description:student_test.field_student_student__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_detail__student_id
+#: model:ir.model.fields,field_description:student_test.field_student_audit_log__student_info
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_search
+#: model_terms:ir.ui.view,arch_db:student_test.view_student_calendar
+#: model_terms:ir.ui.view,arch_db:student_test.view_student_graph
+#: selection:student.student,ref:0
+msgid "Student"
+msgstr "طالب"
+
+#. module: student_test
+#: model:ir.actions.act_window,name:student_test.action_student_audit_log
+#: model:ir.ui.menu,name:student_test.menu_log
+#: model_terms:ir.ui.view,arch_db:student_test.student_audit_form_view
+#: model_terms:ir.ui.view,arch_db:student_test.student_audit_tree_view
+msgid "Student Audit Log"
+msgstr "سجل تدقيق الطلاب"
+
+#. module: student_test
+#: model:ir.actions.act_window,name:student_test.student_student_female_action
+#: model:ir.ui.menu,name:student_test.student_female_menu
+msgid "Student Female"
+msgstr "طلاب - انثى"
+
+#. module: student_test
+#: model:ir.model,name:student_test.model_hobbies_detail
+msgid "Student Hobbies"
+msgstr "هوابات الطلاب"
+
+#. module: student_test
+#: model:ir.model,name:student_test.model_student_student
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Student Information"
+msgstr "معلومات الطالب"
+
+#. module: student_test
+#: model:ir.actions.act_window,name:student_test.student_student_male_action
+#: model:ir.ui.menu,name:student_test.student_male_menu
+msgid "Student Male"
+msgstr "طالب - ذكر"
+
+#. module: student_test
+#: model:ir.module.category,name:student_test.student_management_access_categ
+#: model:ir.ui.menu,name:student_test.main_student_menu
+#: model:ir.ui.menu,name:student_test.student_base_menu
+msgid "Student Management"
+msgstr "إدارة الطلاب"
+
+#. module: student_test
+#: model:ir.actions.report,name:student_test.student_report
+msgid "Student Profile"
+msgstr "الملف الشخصي للطالب"
+
+#. module: student_test
+#: model:ir.model,name:student_test.model_schoolresults_detail
+msgid "Student's student secondary education results."
+msgstr "نتائج الطالب في التعليم الثانوي."
+
+#. module: student_test
+#: model:ir.model,name:student_test.model_schoolresults_subject
+msgid "Student's student secondary education subjects."
+msgstr "الطالب مواد التعليم الثانوي الطالب ."
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_detail__subject_id
+#: model:ir.model.fields,field_description:student_test.field_schoolresults_subject__name
+#: model_terms:ir.ui.view,arch_db:student_test.student_profile_template
+msgid "Subject"
+msgstr "الموضوع"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__template
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Template"
+msgstr "قالب"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Test x2Many"
+msgstr ""
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_form
+msgid "Third Year Register"
+msgstr "تسجيل السنة الثالثة"
+
+#. module: student_test
+#: selection:student.student,state:0
+msgid "Third Year Registered"
+msgstr "اعادة تسجيل السنة الثالثة"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_wiz_calc_age__to_date
+msgid "To Date"
+msgstr "حتى لتاريخ"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__totfees
+msgid "Total Fees ($)"
+msgstr "مجموع الرسوم (جنية)"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_student__tutfees
+msgid "Tuition Fees ($)"
+msgstr "الرسوم الدراسية (الجنية)"
+
+#. module: student_test
+#: selection:student.audit.log,status:0
+msgid "Updated"
+msgstr "تحديث"
+
+#. module: student_test
+#: selection:student.student,ref:0
+msgid "User"
+msgstr "مستخدم"
+
+#. module: student_test
+#: model:ir.model.fields,field_description:student_test.field_student_audit_log__user_id
+msgid "User ID"
+msgstr "رقم المستخدم"
+
+#. module: student_test
+#: selection:student.student,health_issues:0
+msgid "Yes"
+msgstr "نعم"
+
+#. module: student_test
+#: code:addons/student_test/models/student.py:151
+#, python-format
+msgid "You are not allowed to delete the record!"
+msgstr "غير مسموح لك بحذف السجل!"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.wizard_calc_age_form
+msgid "or"
+msgstr "أو"
+
+#. module: student_test
+#: model_terms:ir.ui.view,arch_db:student_test.student_male_view_search
+msgid "state"
+msgstr "المرحلة"
+
+#. module: student_test
+#: model:ir.model,name:student_test.model_student_audit_log
+msgid "student.audit.log"
+msgstr "سجل تدقيق الطالب"
+
+#. module: student_test
+#: model:ir.model,name:student_test.model_wiz_calc_age
+msgid "wiz.calc.age"
+msgstr "حساب العمر"

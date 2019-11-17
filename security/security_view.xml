@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<odoo>
+        <data>
+        <!-- Record Rules -->
+
+<!--         <record id="student_access_rule" model="ir.rule">-->
+<!--             <field name="name">Student Access Rule</field>-->
+<!--             <field name="model_id" ref="model_student_student"/>-->
+<!--             <field name="domain_force">[('degree_id.name','ilike','c')]</field>-->
+<!--         </record>-->
+<!--              <record id="student_access_rule" model="ir.rule">-->
+<!--             <field name="name">Student Access Rule</field>-->
+<!--             <field name="model_id" ref="model_student_student"/>-->
+<!--             <field name="domain_force">[('state','ilike','dismiss')]</field>-->
+<!--         </record>-->
+           <!-- define access group category -->
+           <record id="student_management_access_categ" model="ir.module.category">
+           		<field name="name">Student Management</field>
+           </record>
+           
+           <!-- group of staff -->
+           <record id="staff_access_group" model="res.groups">
+               <field name="name">Registration Staff</field>
+               <field name="help">Student Registration Office Staff</field>
+               <field name="category_id" ref="student_management_access_categ"/>
+           </record>
+           <!-- group of manager -->
+           <record id="manager_access_group" model="res.groups">
+               <field name="name">Manager</field>
+               <field name="help">Registration Office Manager</field>
+               <field name="category_id" ref="student_management_access_categ"/>
+               <field name="implied_ids" eval="[(4,ref('staff_access_group'))]"/>
+           </record>
+        </data>
+	</odoo>

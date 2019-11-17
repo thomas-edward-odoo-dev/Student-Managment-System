@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Student seat_no Sequence -->
+        <record id="seq_student_seatno" model="ir.sequence">
+            <field name="name">Student Sequence</field>
+            <field name="code">student.seatno.sequence</field>
+            <field name="prefix">%(year)s/</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+            <field name="implementation">no_gap</field>
+        </record>
+        
+        <!-- Student uni_no Sequence -->
+        <record id="seq_student_unino" model="ir.sequence">
+            <field name="name">Student Sequence</field>
+            <field name="code">student.unino.sequence</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+            <field name="implementation">no_gap</field>
+        </record>
+
+                <!-- Student uni_no Sequence -->
+        <record id="seq_student_counter" model="ir.sequence">
+            <field name="name">Student Sequence</field>
+            <field name="code">student.counter.sequence</field>
+            <field name="padding">4</field>
+            <field name="company_id" eval="False"/>
+            <field name="implementation">no_gap</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <odoo>
+    	<data>
+        	<template id="student_profile_template">
+            	<!-- predefined, t-call call existing functionality -->
+            	<t t-call="web.html_container">
+                	<t t-foreach="docs" t-as="o">
+                    	<!-- either use same template, inherit external_layout or create your own -->
+                    	<t t-call="web.external_layout">
+                        	<!-- each report will start from new page -->
+                        	<div class="page">
+                            	<!-- general student information -->
+                            	<group string="General Information">
+                            		<br></br>
+                                	<h4>General Student Information</h4>
+                                	<table class="table-bordered" width="100%">
+                                    	<tr>
+                                        	<td>
+                                            	<b>Ministry University No.:</b>
+                                        	</td>
+                                        	<td width="50%">
+                                            	<b><span t-field="o.uni_no"/></b>
+                                        	</td>
+                                    	</tr>
+                                    	<tr>
+                                        	<td width="50%">
+                                            	<b>University Seat No.:</b>
+                                        	</td>
+                                        	<td>
+                                            	<b><span t-field="o.seat_no"/></b>
+                                        	</td>
+                                    	</tr>
+                                    	<tr>
+                                        	<td>
+                                            	<b>Name:</b>
+                                        	</td>
+                                        	<td width="50%">
+                                            	<span t-field="o.name"/>
+                                        	</td>
+                                   	 	</tr>
+                                    	<tr>
+                                        	<td>
+                                            	<b>Date of Birth:</b>
+                                        	</td>
+                                        	<td width="50%">
+                                            	<span t-field="o.dob"/>
+                                        	</td>
+                                    	</tr>
+                                    	<tr>
+                                        	<td>
+                                            	<b>Age:</b>
+                                        	</td>
+                                        	<td width="50%">
+                                            	<span t-field="o.age"/>
+                                        	</td>
+                                    	</tr>
+                                    	<tr>
+                                        	<td>
+                                            	<b>Email:</b>
+                                        	</td>
+                                        	<td width="50%">
+                                            	<span t-field="o.email"/>
+                                        	</td>
+                                    	</tr>
+                                    	<tr>
+                                        	<td>
+                                            	<b>Phone:</b>
+                                        	</td>
+                                        	<td width="50%">
+                                            	<span t-field="o.phone"/>
+                                        	</td>
+                                    	</tr>
+                                    	<tr>
+                                        	<td>
+                                            	<b>Degree Registered For:</b>
+                                        	</td>
+                                        	<td width="50%">
+                                            	<span t-field="o.degree_id"/>
+                                        	</td>
+                                    	</tr>
+                                    	<tr>
+                                        	<td>
+                                            	<b>Status:</b>
+                                        	</td>
+                                        	<td width="50%">
+                                            	<span t-field="o.state"/>
+                                        	</td>
+                                    	</tr>
+                                	</table>
+                                	<hr></hr>
+                            	</group>
+                            
+                            <!-- school results information -->
+                            <group string="School Result Details">
+                                <h4>School Results Information</h4>
+                                    <table class="table-bordered" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Subject</th>
+                                                <th>Result</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <t t-foreach="o.result_ids" t-as="m">
+                                                <tr>
+                                                    <td><span t-field="m.subject_id"/></td>
+                                                    <td><span t-field="m.result"/></td>
+                                                </tr>
+                                            </t>
+                                        </tbody>
+                                    </table>
+                                <hr></hr>
+								<img width="200" height="200" t-att-src="'/report/barcode/QR/%s' % 'My text in qr code'"/>
+                            </group>
+                                
+                                
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    
+    </data>
+</odoo>

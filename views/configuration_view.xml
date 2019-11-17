@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<!-- Form view of Degree -->
+		<record id="view_degree_form" model="ir.ui.view">
+				<field name="name">view.degree.form</field>
+				<field name="model">degree.detail</field>
+				<field name="arch" type="xml">
+					<form string="Degrees">
+						<sheet>
+						 	<group>
+						 		<field name="name"/>
+						 		<field name="dorf_id"/>
+						 		<field name="dord_id"/>
+						 		<field name="degfees"/>
+						 	</group>
+						 </sheet>
+					</form>
+				</field>
+		</record>
+
+		<!-- Tree view of Degree -->
+		<record id="view_degree_tree" model="ir.ui.view">
+			<field name="name">view.degree.tree</field>
+			<field name="model">degree.detail</field>
+			<field name="arch" type="xml">
+				<tree string="Degrees">
+					<field name="name"/>
+					<field name="dorf_id" class="oe_inline oe_no_button"/>
+					<field name="dord_id" class="oe_inline oe_no_button"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Form view of Faculty Information -->
+		<record id="view_faculty_form" model="ir.ui.view">
+				<field name="name">view.faculty.form</field>
+				<field name="model">dorf.information</field>
+				<field name="arch" type="xml">
+					<form string="Faculty Information">
+						<sheet>
+						 	<group>
+						 		<field name="code"/>
+						 		<field name="name"/>
+						 	</group>
+						 </sheet>
+					</form>
+				</field>
+		</record>
+
+		<!-- Tree view of Faculty Information -->
+		<record id="view_faculty_tree" model="ir.ui.view">
+			<field name="name">view.faculty.tree</field>
+			<field name="model">dorf.information</field>
+			<field name="arch" type="xml">
+				<tree string="Faculty Information">
+					<field name="code"/>
+					<field name="name"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Form view of Department Information -->
+		<record id="view_department_form" model="ir.ui.view">
+				<field name="name">view.department.form</field>
+				<field name="model">dord.information</field>
+				<field name="arch" type="xml">
+					<form string="Department Information">
+						<sheet>
+						 	<group>
+						 		<field name="code"/>
+						 		<field name="name"/>
+						 		<field name="dorf_id" class="oe_no_button"/>
+						 	</group>
+						 </sheet>
+					</form>
+				</field>
+		</record>
+
+		<!-- Tree view of Department Information -->
+		<record id="view_faculty_tree" model="ir.ui.view">
+			<field name="name">view.department.tree</field>
+			<field name="model">dord.information</field>
+			<field name="arch" type="xml">
+				<tree string="Department Information">
+					<field name="code"/>
+					<field name="name"/>
+					<field name="dorf_id"/>
+				</tree>
+			</field>
+		</record>
+
+		<!-- Search view of Degree -->
+		<record id="view_degree_search" model="ir.ui.view">
+			<field name="name">view.degree.search</field>
+			<field name="model">degree.detail</field>
+			<field name="arch" type="xml">
+				<search string="Degrees">
+					<field name="dorf_id"/>
+					<field name="dord_id"/>
+					<field name="name"/>
+						<group string="Group By">
+							<filter name="by_faculty" string="Faculty/Department" context="{'group_by':'dorf_id'}"/>
+							<filter name="by_department" string="Department/Divison" context="{'group_by':'dord_id'}"/>
+						</group>
+				</search>
+			</field>
+		</record>
+
+		<!-- Action of Degree -->
+		<record id="action_degree_detail" model="ir.actions.act_window">
+			<field name="name">Degree Details</field>
+			<field name="res_model">degree.detail</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<!-- Action of Faculty Information -->
+		<record id="action_faculty_information" model="ir.actions.act_window">
+			<field name="name">Faculty Information</field>
+			<field name="res_model">dorf.information</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<!-- Action of Department Information -->
+		<record id="action_department_information" model="ir.actions.act_window">
+			<field name="name">Department Information</field>
+			<field name="res_model">dord.information</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<!-- Menu -->
+		<menuitem id="menu_configuration" name="Configuration and Log" parent="student_base_menu"/>
+		<menuitem id="menu_degree_detail" action="action_degree_detail" parent="menu_configuration" />
+		<menuitem id="menu_faculty_information" action="action_faculty_information" parent="menu_configuration"/>
+		<menuitem id="menu_department_information" action="action_department_information" parent="menu_configuration"/>
+
+	</data>
+</odoo>
